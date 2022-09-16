@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = ".",
+        features = "src/test/java/resources/featurefile",
         glue = "gov/uk/check/visa",
         plugin = { "pretty", "html:target/cucumber-report/cucumber.html",
                 "com.cucumber.listener.ExtentCucumberFormatter:target/Extent_Reports/report.html",

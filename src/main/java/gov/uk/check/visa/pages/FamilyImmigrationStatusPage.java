@@ -17,23 +17,15 @@ public class FamilyImmigrationStatusPage extends Utility {
 
 
     @CacheLookup
-    @FindBy(xpath = "//label[contains(text(),'Yes')]")
+    @FindBy(xpath = "//input[@id='response=0']")
     WebElement yesRadiobtn;
 
-    @CacheLookup
-    @FindBy(xpath = "//label[contains(text(),'No')]")
-    WebElement noRadiobtn;
 
 
-    public void selectImmigrationStatus(String status) throws InterruptedException {
-    switch (status.trim()) {
-        case "Yes":
-            clickOnElement(yesRadiobtn);
-            break;
-        case "No":
-            clickOnElement(noRadiobtn);
-            break;}
-            Thread.sleep(1000);
+
+    public void selectImmigrationStatus()  {
+        clickOnElement(yesRadiobtn);
+
     }
 }
 

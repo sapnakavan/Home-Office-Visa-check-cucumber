@@ -58,8 +58,8 @@ public class VisaconfirmSteps {
     }
 
     @And("^I state My partner or family member have uk immigration status 'yes'$")
-    public void iStateMyPartnerOrFamilyMemberHaveUkImmigrationStatusYes() throws InterruptedException {
-        new FamilyImmigrationStatusPage().selectImmigrationStatus("Yes");
+    public void iStateMyPartnerOrFamilyMemberHaveUkImmigrationStatusYes()  {
+        new FamilyImmigrationStatusPage().selectImmigrationStatus();
     }
 
 
@@ -85,7 +85,7 @@ public class VisaconfirmSteps {
 
     @And("^I state I am intending to stay$")
     public void iStateIAmIntendingToStay() {
-        new DurationOfStayPage().setduration("longer than 6 months");
+        new DurationOfStayPage().setduration();
     }
 
     @And("^I state I have planning to work$")

@@ -16,19 +16,17 @@ public class DurationOfStayPage extends Utility {
         PageFactory.initElements(driver, this);}
 
 @CacheLookup
-    @FindBy(xpath = "//div[@class='govuk-radios']/div/label")
-    List<WebElement> radiobuttons;
+    @FindBy(xpath = "//input[@id='response-1']")
+    WebElement radiobuttons;
 
 
-    public void setduration(String duration){
-        for(WebElement time : radiobuttons){
-            if(time.getText().equals(duration)){
-                time.click();
-                break;
+    public void setduration(){
+        clickOnElement(radiobuttons);
+
             }
         }
-    }
 
-    }
+
+
 
 
